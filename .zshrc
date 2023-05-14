@@ -13,6 +13,7 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7A7A7A"
 export COLORTERM="truecolor"
 export EDITOR="nvim"
 export JAVA_HOME="/usr/lib/jvm/java-20-openjdk"
+export CHATBLADE_THEME="autumn"
 
 # disable cursor blinking
 # echo "\e[2 q"

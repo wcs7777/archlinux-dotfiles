@@ -15,7 +15,6 @@ __wcs_create_mssql_container() {
 		-p 1433:1433 \
 		--name "$name" \
 		--hostname "$name" \
-		-v "${name}:/var/opt/mssql" \
 		"$image"
 }
 
