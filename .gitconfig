@@ -1,0 +1,46 @@
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+	useHttpPath = true
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	editor = vim
+[user]
+	name = wcs7777
+	email = wcs777git@gmail.com
+[alias]
+	edit = config --edit
+	editg = config --global --edit
+	st = status -sb
+	b = branch
+	c = checkout
+	m = checkout main
+	cob = checkout -b
+	l = log --oneline
+	lg = log --all --graph --decorate --oneline --abbrev-commit
+	last = log -1 HEAD --stat
+	cm = !git add -A && git commit -m
+	bdel = branch -D
+	undo = reset HEAD~1 --mixed
+	amend = commit -a --amend
+	se = !git rev-list --all | xargs git grep -F
+	done = !git push origin HEAD
+	upstream = !git push -u origin HEAD
+	down=!git pull --rebase --prune $@ && git submodule update --init --recursive
+	downm=!git pull --rebase --prune origin main && git submodule update --init
+	rlc = reset HEAD^
+	br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[includeIf "gitdir:/mnt/wsl/shared/projects/"]
+	path = /mnt/wsl/shared/projects/.gitconfig

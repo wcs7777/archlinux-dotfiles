@@ -1,0 +1,16 @@
+[main]
+
+multi_line = True
+syntax_style = autumn
+key_bindings = vi
+prompt = '\t \u@\h:\d => '
+prompt_continuation = '·'
+keyword_casing = upper
+auto_vertical_output = True
+
+[colors]
+output.header = '#BB3A0B bold'
+
+[favorite_queries]
+all_mysql_users = '''SELECT user, right(authentication_string, 4) AS authentication_string, plugin, host FROM mysql.user;'''
+
