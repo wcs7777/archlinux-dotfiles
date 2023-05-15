@@ -1,0 +1,7 @@
+#!/bin/bash
+
+. /opt/asdf-vm/asdf.sh
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf list all nodejs
+asdf install nodejs lts
+asdf global nodejs lts
