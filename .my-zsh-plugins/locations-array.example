@@ -1,0 +1,4 @@
+typeset -a __wcs_locations_array
+__wcs_locations_array=(
+	""
+)
