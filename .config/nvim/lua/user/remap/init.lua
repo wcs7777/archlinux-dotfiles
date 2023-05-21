@@ -7,6 +7,7 @@ local insert_new_lines_below = utils_map.insert_new_lines_below
 local insert_new_lines_above = utils_map.insert_new_lines_above
 local join_lines_without_space = utils_map.join_lines_without_space
 local toggle_background_color = utils_map.toggle_background_color
+local paste_without_yank = utils_map.paste_without_yank
 local toggle_option = require('user.utils.toggle_option')
 local selection_bounds = require('user.utils.selection_bounds')
 
@@ -61,7 +62,7 @@ map('n', '<Leader>K', insert_new_lines_above, 'Insert new lines above')
 map('n', '<Leader>k', insert_new_lines_below, 'Insert new lines below')
 map('n', '<Leader>ld', duplicate_current_line, 'Duplicate line')
 map('v', '<Leader>ld', duplicate_selection, 'Duplicate selection')
-map('v', '<Leader>p', '"_dP', 'Replace keeping register')
+map('v', '<Leader>p', paste_without_yank, 'Paste without yank')
 map('v', '<S-TAB>', '<gv', 'Dedent keeping selection')
 map('v', '<TAB>',   '>gv', 'Indent keeping selection')
 map('v', 'J', [[:m '>+1<CR>gv=gv]], 'Move selection below')
@@ -80,6 +81,7 @@ map('n', '<Leader>uli', fn(toggle_option, 'list'), 'Toggle list')
 map('n', '<Leader>urn', fn(toggle_option, 'relativenumber'), 'Toggle relativenumber')
 map('n', '<Leader>usp', fn(toggle_option, 'spell'), 'Toggle spell')
 map('n', '<Leader>uwr', fn(toggle_option, 'wrap'), 'Toggle wrap lines')
+map('n', '<Leader>uhl', fn(toggle_option, 'hlsearch'), 'Toggle highlight search')
 map('n', '<M-z>', fn(toggle_option, 'wrap'), 'Toggle wrap lines')
 
 -- _Window

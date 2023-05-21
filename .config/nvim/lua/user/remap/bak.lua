@@ -72,4 +72,3 @@ map('t', '<C-h>', '<C-\\><C-N><C-w>h', 'Go to the window on the left')
 map('t', '<C-j>', '<C-\\><C-N><C-w>j', 'Go to the window below')
 map('t', '<C-k>', '<C-\\><C-N><C-w>k', 'Go to the window above')
 map('t', '<C-l>', '<C-\\><C-N><C-w>l', 'Go to the window on the right')
-

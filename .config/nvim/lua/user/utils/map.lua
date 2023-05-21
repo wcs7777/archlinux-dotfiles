@@ -94,5 +94,10 @@ function M.toggle_background_color()
 	end
 end
 
-return M
+function M.paste_without_yank()
+	local content = vim.fn.getreg('"')
+	vim.cmd('normal! ""p')
+	vim.fn.setreg('"', content)
+end
 
+return M
