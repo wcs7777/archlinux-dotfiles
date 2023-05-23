@@ -14,6 +14,11 @@ if [ -n "$ZSH_NAME" ]; then
 	bindkey "^[2"     __wcs_location_2
 	bindkey "^[3"     __wcs_location_3
 	bindkey "^[4"     __wcs_location_4
+	bindkey "^[5"     __wcs_location_5
+	bindkey "^[6"     __wcs_location_6
+	bindkey "^[7"     __wcs_location_7
+	bindkey "^[8"     __wcs_location_8
+	bindkey "^[9"     __wcs_location_9
 	bindkey "^Y"      __wcs_fhistory_edit
 elif [ -n "$BASH" ]; then
 	bind "\C-H":shell-backward-kill-word

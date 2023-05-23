@@ -30,6 +30,11 @@ __wcs_location_1() { __wcs_location_by_index 1 }
 __wcs_location_2() { __wcs_location_by_index 2 }
 __wcs_location_3() { __wcs_location_by_index 3 }
 __wcs_location_4() { __wcs_location_by_index 4 }
+__wcs_location_5() { __wcs_location_by_index 5 }
+__wcs_location_6() { __wcs_location_by_index 6 }
+__wcs_location_7() { __wcs_location_by_index 7 }
+__wcs_location_8() { __wcs_location_by_index 8 }
+__wcs_location_9() { __wcs_location_by_index 9 }
 
 __wcs_flocations() {
 	zle .kill-buffer
@@ -52,4 +57,9 @@ zle -N __wcs_location_1
 zle -N __wcs_location_2
 zle -N __wcs_location_3
 zle -N __wcs_location_4
+zle -N __wcs_location_5
+zle -N __wcs_location_6
+zle -N __wcs_location_7
+zle -N __wcs_location_8
+zle -N __wcs_location_9
 zle -N __wcs_flocations
