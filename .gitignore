@@ -19,6 +19,7 @@
 
 !/.my-zsh-plugins
 /.my-zsh-plugins/locations-array.zsh
+/.my-zsh-plugins/array-locations.zsh
 /.my-zsh-plugins/secret-variables.zsh
 
 !/.config
