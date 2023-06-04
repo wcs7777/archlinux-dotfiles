@@ -4,6 +4,7 @@ local plugins = {
 	'easy-align',
 	'harpoon',
 	'lsp-zero',
+	'Navigator',
 	'nord',
 	'nvim-tree',
 	'rose-pine',

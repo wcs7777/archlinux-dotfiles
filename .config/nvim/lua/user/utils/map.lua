@@ -13,6 +13,19 @@ function M.map(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, rhs, options)
 end
 
+function M.unmap(mode, lhs, rhs, opts)
+	local options = { noremap = true, silent = true }
+	if opts then
+		if type(opts) == 'string' then
+			local desc = type(rhs) == 'string' and rhs .. ' - ' or ''
+			options.desc = desc .. opts
+		else
+			options = vim.tbl_extend('force', options, opts)
+		end
+	end
+	vim.keymap.del(mode, lhs, options)
+end
+
 function M.function_wrapper(fn, ...)
 	local args = {...}
 	return function()
