@@ -1,5 +1,6 @@
 if [ -n "$ZSH_NAME" ]; then
 	# bindkey "^L"      __wcs_clear_prompt
+	bindkey "^O"      clear-screen
 	bindkey "^H"      backward-kill-word
 	bindkey "^[[3;5~" kill-word
 	bindkey "^[[H"    beginning-of-line
