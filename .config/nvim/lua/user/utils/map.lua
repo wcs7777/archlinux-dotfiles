@@ -1,6 +1,6 @@
 local M = {}
 
-function M.map(mode, lhs, rhs, opts)
+local function default_options(opts)
 	local options = { noremap = true, silent = true }
 	if opts then
 		if type(opts) == 'string' then
@@ -10,20 +10,21 @@ function M.map(mode, lhs, rhs, opts)
 			options = vim.tbl_extend('force', options, opts)
 		end
 	end
-	vim.keymap.set(mode, lhs, rhs, options)
+	return options
+end
+
+function M.map(mode, lhs, rhs, opts)
+	vim.keymap.set(mode, lhs, rhs, default_options(opts))
 end
 
 function M.unmap(mode, lhs, rhs, opts)
-	local options = { noremap = true, silent = true }
-	if opts then
-		if type(opts) == 'string' then
-			local desc = type(rhs) == 'string' and rhs .. ' - ' or ''
-			options.desc = desc .. opts
-		else
-			options = vim.tbl_extend('force', options, opts)
-		end
-	end
-	vim.keymap.del(mode, lhs, options)
+	vim.keymap.del(mode, lhs, default_options(opts))
+end
+
+function M.buf_map(buffer, mode, lhs, rhs, opts)
+	options = default_options(opts)
+	options = vim.tbl_extend('force', options, { buffer = buffer })
+	vim.keymap.set(mode, lhs, rhs, options)
 end
 
 function M.function_wrapper(fn, ...)

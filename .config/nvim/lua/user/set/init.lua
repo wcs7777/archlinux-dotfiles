@@ -1,7 +1,8 @@
+vim.g.maplocalleader = ' '
+vim.g.mapleader = ' '
+
 local set = vim.opt
 local tabsize = 2
-
-vim.g.mapleader = ' '
 
 set.backup = false
 set.colorcolumn = { '' }
@@ -52,4 +53,3 @@ if vim.fn.executable('rg') then
 	set.grepprg = 'rg --vimgrep --smart-case --hidden'
 	set.grepformat = { '%f:%l:%c:%m' }
 end
-

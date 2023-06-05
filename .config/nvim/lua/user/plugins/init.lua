@@ -3,7 +3,6 @@ return join_plugins(
 	'general',
 	'navigation',
 	'text',
-	'colorschemes'
-	-- 'lsp',
+	'colorschemes',
+	'lsp'
 )
-

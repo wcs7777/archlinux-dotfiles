@@ -3,7 +3,6 @@ local plugins = {
 	'Comment',
 	'easy-align',
 	'harpoon',
-	'lsp-zero',
 	'Navigator',
 	'nord',
 	'nvim-tree',
@@ -19,3 +18,4 @@ local plugins = {
 for _, plugin in pairs(plugins) do
 	config(plugin)
 end
+require('user.plugins.config.lsp')
