@@ -1,6 +1,7 @@
 if [ -n "$ZSH_NAME" ]; then
 	# bindkey "^L"      __wcs_clear_prompt
 	bindkey "^O"      clear-screen
+	bindkey "^[l"      clear-screen
 	bindkey "^H"      backward-kill-word
 	bindkey "^[[3;5~" kill-word
 	bindkey "^[[H"    beginning-of-line
@@ -11,7 +12,7 @@ if [ -n "$ZSH_NAME" ]; then
 	bindkey "^[[1;5C" forward-word
 	bindkey "^[[1;5D" backward-word
 	bindkey "^ "      autosuggest-accept
-	bindkey "^[m"     __wcs_location_h
+	bindkey "^[h"     __wcs_location_h
 	bindkey "^[0"     __wcs_flocations
 	bindkey "^[1"     __wcs_location_1
 	bindkey "^[2"     __wcs_location_2
