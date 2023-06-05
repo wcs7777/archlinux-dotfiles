@@ -14,17 +14,19 @@ local function default_options(opts)
 end
 
 function M.map(mode, lhs, rhs, opts)
-	vim.keymap.set(mode, lhs, rhs, default_options(opts))
+	return vim.keymap.set(mode, lhs, rhs, default_options(opts))
 end
 
 function M.unmap(mode, lhs, rhs, opts)
-	vim.keymap.del(mode, lhs, default_options(opts))
+	return vim.keymap.del(mode, lhs, default_options(opts))
 end
 
-function M.buf_map(buffer, mode, lhs, rhs, opts)
-	options = default_options(opts)
-	options = vim.tbl_extend('force', options, { buffer = buffer })
-	vim.keymap.set(mode, lhs, rhs, options)
+function M.create_buf_map(buffer)
+	return function(mode, lhs, rhs, opts)
+		local options = default_options(opts)
+		options = vim.tbl_extend('force', options, { buffer = buffer })
+		return vim.keymap.set(mode, lhs, rhs, options)
+	end
 end
 
 function M.function_wrapper(fn, ...)
