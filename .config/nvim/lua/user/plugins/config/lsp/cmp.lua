@@ -79,8 +79,22 @@ cmp.setup({
 	},
 	sources = {
 		{ name = 'nvim_lsp' },
-		{ name = 'buffer' },
+		{
+			name = 'buffer',
+			option = {
+				get_bufnrs = function()
+					local buf = vim.api.nvim_get_current_buf()
+					local byte_size = vim.api.nvim_buf_get_offset(buf, vim.api.nvim_buf_line_count(buf))
+					if byte_size > 1024 * 1024 * 5 then -- 5 Megabyte max
+						return {}
+					else
+						return { buf }
+					end
+				end,
+			},
+		},
 		{ name = 'path' },
+		{ name = 'nvim_lua' },
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
