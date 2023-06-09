@@ -27,3 +27,5 @@
 !/.config/bat
 !/.config/nvim
 /.config/nvim/plugin/*
+
+*.log
