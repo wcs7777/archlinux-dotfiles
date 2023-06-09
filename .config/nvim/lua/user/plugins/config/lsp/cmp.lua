@@ -71,12 +71,16 @@ cmp.setup({
 			vim_item.kind = string.format('%s', kind_icons[vim_item.kind])
 			vim_item.menu = ({
 				nvim_lsp = '[LSP]',
+				buffer = '[Buffer]',
+				path = '[Path]',
 			})[entry.source.name]
 			return vim_item
 		end,
 	},
 	sources = {
 		{ name = 'nvim_lsp' },
+		{ name = 'buffer' },
+		{ name = 'path' },
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
