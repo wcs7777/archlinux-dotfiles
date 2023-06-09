@@ -1,8 +1,10 @@
 local config = require('user.utils.config_plugin')
 local plugins = {
+	'bufferline',
 	'Comment',
 	'easy-align',
 	'harpoon',
+	'lualine',
 	'Navigator',
 	'nord',
 	'nvim-tree',

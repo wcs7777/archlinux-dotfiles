@@ -4,5 +4,6 @@ return join_plugins(
 	'navigation',
 	'text',
 	'colorschemes',
-	'lsp'
+	'lsp',
+	'ui'
 )

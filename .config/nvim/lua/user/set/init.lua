@@ -27,6 +27,7 @@ set.pumheight = 10
 set.relativenumber = true
 set.scrolloff = 2
 set.shiftwidth = tabsize
+set.showmode = false
 set.showtabline = 2
 set.sidescrolloff = 2
 set.signcolumn = 'yes'

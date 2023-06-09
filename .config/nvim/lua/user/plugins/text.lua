@@ -4,4 +4,3 @@ return {
 	{ 'kylechui/nvim-surround',   as = 'surround', tag = '*' },
 	{ 'junegunn/vim-easy-align',  as = 'easy-align' },
 }
-
