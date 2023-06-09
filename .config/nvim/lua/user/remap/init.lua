@@ -9,7 +9,6 @@ local join_lines_without_space = utils_map.join_lines_without_space
 local toggle_background_color = utils_map.toggle_background_color
 local paste_without_yank = utils_map.paste_without_yank
 local toggle_option = require('user.utils.toggle_option')
-local selection_bounds = require('user.utils.selection_bounds')
 
 -- _Cursor_movement
 -- _Miscellaneous
@@ -43,7 +42,7 @@ map('n', '<Leader>bs', '<C-^>', 'Buffer switching')
 map('n', '<M-h>', vim.cmd.bprevious, 'Next buffer')
 map('n', '<M-l>', vim.cmd.bnext, 'Previous buffer')
 map('n', '<Leader>e', vim.cmd.NvimTreeToggle, 'Toggle NvimTree')
-map('n', '<Leader>pv', vim.cmd.NvimTreeFocus, 'Focus NvimTree')
+map('n', '<Leader>pv', vim.cmd.NvimTreeFindFile, 'Focus NvimTree')
 
 -- _Normal_mode
 map({ 'n', 'v', 'o', 'l', 't' }, '<C-[>', '<C-\\><C-N>', 'Back to normal mode')
