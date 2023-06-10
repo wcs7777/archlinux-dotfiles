@@ -4,8 +4,10 @@ local plugins = {
 	'Comment',
 	'easy-align',
 	'harpoon',
+	'indent-blankline',
 	'lualine',
 	'Navigator',
+	'neoproj',
 	'nord',
 	'nvim-tree',
 	'rose-pine',
@@ -16,6 +18,7 @@ local plugins = {
 	'treesitter',
 	'undotree',
 	'which-key',
+	'wilder',
 }
 for _, plugin in pairs(plugins) do
 	config(plugin)

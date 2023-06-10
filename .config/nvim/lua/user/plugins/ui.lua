@@ -1,4 +1,5 @@
 return {
-	{ 'akinsho/bufferline.nvim',   as = 'bufferline' },
-	{ 'nvim-lualine/lualine.nvim', as = 'lualine' },
+	{ 'akinsho/bufferline.nvim',             as = 'bufferline' },
+	{ 'nvim-lualine/lualine.nvim',           as = 'lualine' },
+	{ 'lukas-reineke/indent-blankline.nvim', as = 'indent-blankline' },
 }
