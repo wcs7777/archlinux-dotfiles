@@ -6,4 +6,3 @@ return function()
 	end
 	return first, last
 end
-

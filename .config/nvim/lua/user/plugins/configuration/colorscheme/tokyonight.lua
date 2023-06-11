@@ -4,4 +4,3 @@ require('tokyonight').setup({
 		keywords = { italic = false },
 	},
 })
-

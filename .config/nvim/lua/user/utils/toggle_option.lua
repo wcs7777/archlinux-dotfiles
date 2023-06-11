@@ -11,4 +11,3 @@ return function(option, values)
 		set[option] = not current
 	end
 end
-

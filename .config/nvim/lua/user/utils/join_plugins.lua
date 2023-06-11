@@ -1,10 +1,9 @@
 local join_tables = require('user.utils.join_tables')
-return function(...)
-	local args = { ... }
+
+return function(plugins)
 	local dest = {}
-	for _, arg in pairs(args) do
-		dest = join_tables(dest, require('user.plugins.' .. arg))
+	for _, plugin in ipairs(plugins) do
+		dest = join_tables(dest, require('user.plugins.' .. plugin))
 	end
 	return dest
 end
-

@@ -11,12 +11,12 @@ end
 
 local packer_bootstrap = ensure_packer()
 
-local current_folder = vim.fn.expand('~') .. '/.config/nvim/lua/user/plugins'
-vim.api.nvim_create_autocmd('BufWritePost', {
-	pattern = current_folder .. '/*.lua',
-	group = vim.api.nvim_create_augroup('packer_user_config', { clear = true }),
-	command = [[!nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync']]
-})
+-- local current_folder = vim.fn.expand('~') .. '/.config/nvim/lua/user/plugins'
+-- vim.api.nvim_create_autocmd('BufWritePost', {
+-- 	pattern = current_folder .. '/*.lua',
+-- 	group = vim.api.nvim_create_augroup('packer_user_config', { clear = true }),
+-- 	command = [[!nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync']]
+-- })
 
 local status_ok, packer = pcall(require, 'packer')
 if not status_ok then
@@ -49,4 +49,3 @@ return packer.startup(function(use)
 		packer.sync()
 	end
 end)
-

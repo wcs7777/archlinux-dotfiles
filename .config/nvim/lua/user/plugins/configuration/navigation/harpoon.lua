@@ -16,4 +16,3 @@ map('n', '<M-1>',      fn(ui.nav_file, 1),   'Harpoon file 1')
 map('n', '<M-2>',      fn(ui.nav_file, 2),   'Harpoon file 2')
 map('n', '<M-3>',      fn(ui.nav_file, 3),   'Harpoon file 3')
 map('n', '<M-4>',      fn(ui.nav_file, 4),   'Harpoon file 4')
-

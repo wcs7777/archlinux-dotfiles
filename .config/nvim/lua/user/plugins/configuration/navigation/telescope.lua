@@ -24,4 +24,3 @@ telescope.setup({
 pcall(function()
 	telescope.load_extension('harpoon')
 end)
-

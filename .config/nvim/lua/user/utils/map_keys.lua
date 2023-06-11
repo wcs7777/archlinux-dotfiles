@@ -10,4 +10,3 @@ return function(tbl, mapping)
 	end
 	return dest
 end
-

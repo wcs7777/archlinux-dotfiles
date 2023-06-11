@@ -6,4 +6,3 @@ local autocmds = {
 for _, autocmd in pairs(autocmds) do
 	require('user.autocmd.' .. autocmd)
 end
-

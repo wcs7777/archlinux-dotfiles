@@ -26,4 +26,3 @@ M.remove_extra_new_lines_on_the_end = function()
 end
 
 return M
-

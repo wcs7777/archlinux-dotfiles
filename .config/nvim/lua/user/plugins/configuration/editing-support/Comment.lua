@@ -3,4 +3,3 @@ require('Comment').setup({
 		extra = false,
 	},
 })
-

@@ -1,6 +1,6 @@
 return {
-	{ 'nvim-telescope/telescope.nvim', as = 'telescope', tag = '0.1.1', requires = { { 'nvim-lua/plenary.nvim' } } },
-	{ 'theprimeagen/harpoon',          as = 'harpoon' },
-	{ 'nvim-tree/nvim-tree.lua',       as = 'nvim-tree' },
 	{ 'numToStr/Navigator.nvim',       as = 'Navigator' },
+	{ 'nvim-telescope/telescope.nvim', as = 'telescope' },
+	{ 'nvim-tree/nvim-tree.lua',       as = 'nvim-tree' },
+	{ 'theprimeagen/harpoon',          as = 'harpoon' },
 }

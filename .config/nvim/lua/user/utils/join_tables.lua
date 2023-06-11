@@ -8,4 +8,3 @@ return function(...)
 	end
 	return dest
 end
-
