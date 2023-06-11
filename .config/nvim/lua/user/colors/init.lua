@@ -18,6 +18,7 @@ function ColorMyPencils(scheme, background, transparent_bg, termguicolors)
 			vim.cmd('TransparentDisable')
 		end
 	end)
+	pcall(require, 'user.plugins.configuration.colorscheme.' .. scheme)
 end
 
 ColorMyPencils()
