@@ -1,4 +1,4 @@
-require('user.utils.join_plugins') {
+return require('user.utils.join_plugins') {
 	'plugin-manager',
 	'util',
 	'lsp',

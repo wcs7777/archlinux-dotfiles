@@ -5,16 +5,15 @@ local servers = {
 	'pyright',
 	'sqlls',
 }
+
 require('mason').setup({ max_concurrent_installers = 1 })
 require('mason-lspconfig').setup({
 	ensure_installed = servers,
 	automatic_installation = true,
 })
+
 local handlers = require('user.plugins.configuration.lsp.handlers')
-local ok, lspconfig = pcall(require, 'lspconfig')
-if not ok then
-	return
-end
+local lspconfig = require('lspconfig')
 for _, server in pairs(servers) do
 	local opts = {
 		on_attach = handlers.on_attach,

@@ -1,7 +1,4 @@
-local ok, cmp = pcall(require, 'cmp')
-if not ok then
-	return
-end
+local cmp = require('cmp')
 
 local function check_backspace()
 	local col = vim.fn.col '.' - 1
