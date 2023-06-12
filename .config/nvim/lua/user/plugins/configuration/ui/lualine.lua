@@ -20,6 +20,7 @@ theme.command = {
 require('lualine').setup {
 	options = {
 		-- theme = 'papercolor_light',
-		theme = theme,
+		-- theme = 'powerline_dark',
+		theme = 'modus-vivendi',
 	},
 }

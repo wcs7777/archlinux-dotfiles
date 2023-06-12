@@ -19,6 +19,7 @@ function ColorMyPencils(scheme, background, transparent_bg, termguicolors)
 		end
 	end)
 	pcall(require, 'user.plugins.configuration.colorscheme.' .. scheme)
+	vim.cmd [[highlight! EndOfBuffer guifg=bg]]
 end
 
 ColorMyPencils()
