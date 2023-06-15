@@ -96,7 +96,7 @@ map('n', '<C-Left>',  fn(vim.cmd, 'vertical resize -1'), 'Increase window width'
 map('n', '<C-Right>', fn(vim.cmd, 'vertical resize +1'), 'Decrease window width')
 map('n', '<C-Up>',   fn(vim.cmd, 'resize -1'), 'Increase window height')
 map('n', '<C-Down>', fn(vim.cmd, 'resize +1'), 'Decrease window height')
-map('n', '<Leader>bo', fn(vim.cmd, [[:%bd|e#|bd#]]), 'Close all buffers but current')
+map('n', '<Leader>bo', fn(vim.cmd, [[:%bdelete!|e#|bd#]]), 'Close all buffers but current')
 map('n', '<Leader>th', '<C-w>t<C-w>H', 'Make horizontal split vertical')
 map('n', '<Leader>tk', '<C-w>t<C-w>K', 'Make vertical split horizontal')
 
