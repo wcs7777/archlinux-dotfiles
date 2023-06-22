@@ -21,9 +21,11 @@ require('nvim-tree').setup({
 				folder_arrow = true,
 			},
 			glyphs = {
+				default = '',
+				symlink = '',
 				folder = {
-					arrow_closed = '▶',
-					arrow_open = '◢',
+					arrow_closed = '',
+					arrow_open = '',
 				},
 				git =  {
 					unstaged = '✗',
