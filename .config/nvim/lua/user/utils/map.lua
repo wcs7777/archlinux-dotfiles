@@ -99,7 +99,7 @@ function M.toggle_background_color()
 		colorscheme = 'rose-pine'
 	else
 		background = 'light'
-		colorscheme = 'paper'
+		colorscheme = 'PaperColor'
 	end
 	local ok = pcall(function()
 		vim.opt.background = background
