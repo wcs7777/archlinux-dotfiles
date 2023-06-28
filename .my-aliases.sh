@@ -9,7 +9,7 @@ alias hsi='history 1 | rg -i'
 alias jsplayground="touch /tmp/tmp-playground.js && code /tmp/tmp-playground.js && node --watch /tmp/tmp-playground.js"
 alias lsall='ls -la --color=auto'
 alias permissions="stat -c '%a %U:%G %n'"
-alias py="python3"
+alias py="pipenv run python"
 alias sstart="sudo systemctl start"
 alias sstatus="systemctl status"
 alias sstop="sudo systemctl stop"
@@ -77,4 +77,3 @@ vimless() {
 wincd() {
 	(cd "$(readlink -f ${1:-.})" && explorer.exe .)
 }
-
