@@ -10,9 +10,6 @@ alias jsplayground="touch /tmp/tmp-playground.js && code /tmp/tmp-playground.js 
 alias lsall='ls -la --color=auto'
 alias permissions="stat -c '%a %U:%G %n'"
 alias py="pipenv run python"
-alias sstart="sudo systemctl start"
-alias sstatus="systemctl status"
-alias sstop="sudo systemctl stop"
 
 clipcopy () {
 	cat "${1:-/dev/stdin}" | clip.exe
