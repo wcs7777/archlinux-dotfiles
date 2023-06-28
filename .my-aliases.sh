@@ -9,6 +9,7 @@ alias hsi='history 1 | rg -i'
 alias jsplayground="touch /tmp/tmp-playground.js && code /tmp/tmp-playground.js && node --watch /tmp/tmp-playground.js"
 alias lsall='ls -la --color=auto'
 alias mssql="sudo systemctl reset-failed && sudo systemctl start docker && docker container start mssql"
+alias mssqlstop="docker container stop mssql"
 alias permissions="stat -c '%a %U:%G %n'"
 alias py="pipenv run python"
 
