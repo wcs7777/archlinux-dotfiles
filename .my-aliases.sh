@@ -11,6 +11,7 @@ alias lsall='ls -la --color=auto'
 alias mssql="sudo systemctl reset-failed && sudo systemctl start docker && docker container start mssql"
 alias mssqlstop="docker container stop mssql"
 alias permissions="stat -c '%a %U:%G %n'"
+alias pipenv-list='for venv in ~/.local/share/virtualenvs/* ; do basename $venv; cat $venv/.project | sed "s/\(.*\)/\t\1\n/" ; done'
 alias py="pipenv run python"
 
 clipcopy () {
