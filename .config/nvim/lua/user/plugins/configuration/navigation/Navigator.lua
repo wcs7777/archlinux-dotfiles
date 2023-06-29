@@ -3,7 +3,10 @@ local utils_map = require('user.utils.map')
 local map = utils_map.map
 local unmap = utils_map.unmap
 
-navigator.setup()
+navigator.setup({
+	auto_save = true,
+	disable_on_zoom = true,
+})
 
 unmap('n', '<C-h>', '<C-w>h', 'Go to the window on the left')
 unmap('n', '<C-j>', '<C-w>j', 'Go to the window below')
