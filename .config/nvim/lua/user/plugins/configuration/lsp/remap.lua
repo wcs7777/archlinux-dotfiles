@@ -24,6 +24,8 @@ local function lsp_keymaps(buffer)
 	buf_map('n', ']d', fn(dgn.goto_prev, { buffer = 0 }), 'Move to the previous diagnostic')
 	buf_map('n', '<Leader>dof', dgn.open_float, 'Show diagnostics in a floating window')
 	buf_map('n', '<Leader>dsl', dgn.setloclist, 'Add buffer diagnostics to the location list')
+	buf_map('n', '[q', vim.cmd.cnext, 'Move to the next item on the quickfix list')
+	buf_map('n', ']q', vim.cmd.cprev, 'Move to the previous item on the quickfix list')
 end
 
 vim.api.nvim_create_autocmd('LspAttach', {
