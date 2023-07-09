@@ -5,6 +5,7 @@ local function lsp_keymaps(buffer)
 	local lsp = vim.lsp.buf
 	local dgn = vim.diagnostic
 	local buf_map = create_buf_map(buffer)
+	buf_map('i', '<C-k>', lsp.signature_help, 'Signature Help')
 	buf_map('n', '<Leader>q', 'hl', 'Close float window')
 	buf_map('n', '<Leader>rn', lsp.rename, 'Rename all references to the symbol')
 	buf_map('n', '<Leader>sh', lsp.signature_help, 'Signature Help')
