@@ -1,0 +1,147 @@
+Git is a powerful tool that allows developers to track changes to their codebase, collaborate with others, and manage multiple versions of their code. However, managing multiple branches of code can be a challenge. Switching between branches, creating new ones, and switching back and forth between them can be time-consuming and error-prone. Git Worktree is a feature that can help alleviate some of these problems. In this article, we’ll explore Git Worktree and show you how to use it and combine it with a bare repo to leverage its powerful ability to manage multiple code branches.
+What is Git Worktree?
+
+Git Worktree is a feature that was introduced in Git version 2.5. This feature allows you to create multiple working directories from a single Git repository. Each working directory is linked to a specific branch in the repository, allowing you to work on different branches simultaneously.
+
+The idea behind Git Worktree is to provide developers with greater flexibility when it comes to managing multiple branches of code. Instead of switching back and forth between branches, you can work on multiple branches at the same time, which can be a significant time saver. Additionally, Git Worktree can help you avoid the risk of accidentally committing changes to the wrong branch.
+
+Git Worktree is particularly useful in situations where developers need to work on multiple features simultaneously, or when they need to keep a stable branch separate from the development branch.
+Basic usage of Git Worktree
+
+Before you can use Git Worktree, you need to make sure you have Git version 2.5 or later installed on your system.
+
+Creating a Git Worktree
+
+To create a Git Worktree, you can use the following command:
+
+$ git worktree add <path> <branch>
+
+In this command, <path> is the path to the directory where you want to create the new working directory, and <branch> is the name of the branch you want to link to. For example, if you want to create a new working directory called my-feature-branch that is linked to the feature-branch branch(need to be created in advance), you can use the following command:
+
+$ git worktree add /path/my-feature-branch feature-branch
+
+When you run this command, Git will create a new directory called my-feature-branch in the directory /path/my-feature-branch. This new directory will be linked to the feature-branch branch, which means that any changes you make to the code in this directory will be made to the feature-branch branch.
+
+Removing a Git Worktree
+
+If you no longer need a Git Worktree, you can remove it using the following command:
+
+$ git worktree remove <path>
+
+In this command, <path> is the path to the directory of the Git Worktree you want to remove. For example, if you want to remove the my-feature-branch Git Worktree that we created earlier, you can use the following command:
+
+$ git worktree remove /path/my-feature-branch
+
+Other common commands
+
+# List details of each worktree
+$ git worktree list
+
+# Prune worktree information in $GIT_DIR/worktrees
+$ git worktree prune
+
+# Move a worktree to a new location
+$ git worktree move <worktree> <new-path>
+
+# Repair worktree administrative files
+$ git worktree repair [<path>...]
+
+Advanced usage of Git Worktree
+
+In addition to its basic usage, Git Worktree also supports several advanced features, including bare repo and detached HEADs.
+
+Bare repos
+
+A bare repo is a Git repository that does not contain a working directory. It only contains the .git folder, which stores the metadata and configuration files.
+
+The following command creates a new bare repository that can be used as a starting point for a new working tree:
+
+$ git clone --bare <repository> <path>
+
+Usually, it can be specified to .bare, here is an example:
+
+$ git clone --bare git@github.com:ZacharyL2/mini-react.git .bare
+
+Check out .bare:
+
+.bare
+├── HEAD
+├── config
+├── description
+├── hooks
+│   ├── applypatch-msg.sample
+│   └── ...
+├── info
+│   └── exclude
+├── objects
+│   ├── info
+│   └── pack
+├── packed-refs
+└── refs
+    ├── heads
+    │   ├── develop
+    │   └── main
+    └── tags
+
+Next, you need to generate a .git file:
+
+echo "gitdir: ./.bare" > .git
+
+With it we can use Git commands in the current initial directory and point to the .git folder of the bare repository.
+
+Besides that, we need to edit the .bare/config file and add fetch = +refs/heads/*:refs/remotes/origin/* to the last line:
+
+[core]
+ ...
+[remote "origin"]
+        ...
+        fetch = +refs/heads/*:refs/remotes/origin/*
+
+This ensures that we can display the correct branch name when we create the worktree.
+
+Next, you can create or delete the worktree as described above, and modify and push the code on the corresponding branch, eliminating the trouble of constantly switching branches.
+
+The following is the directory displayed after I executed git worktree add my-main master and git worktree add my-develop develop:
+
+$ tree -a -d
+.
+├── .bare
+│   ├── hooks
+│   ├── info
+│   ├── objects
+│   │   ├── info
+│   │   └── pack
+│   ├── refs
+│   │   ├── heads
+│   │   └── tags
+│   └── worktrees
+│       ├── my-develop
+│       │   └── logs
+│       └── my-main
+│           └── logs
+├── my-develop
+│   ├── public
+│   └── src
+│       ├── assets
+│       └── lib
+└── my-main
+    ├── public
+    └── src
+        ├── assets
+        └── lib
+
+Detached HEADs
+
+A detached HEAD is a state in Git where the repository is not on any branch. Instead, it is in a “detached” state, where the HEAD points directly to a commit. This is useful when you need to make changes to a specific commit without affecting the main repository. We can use the following command:
+
+$ git worktree add --detach <path> <commit>
+
+Conclusion
+
+Git Worktree is a powerful tool for managing multiple branches and features, allowing developers to work with multiple working trees simultaneously without switching between them.
+
+But this also puts a burden on our hard disk, but these sacrifices are usually worthwhile when you participate in large-scale multiplayer projects. For example, you are still developing another function, and the tester finds that there is a problem online, and you need to respond in time It does not need git stash to temporarily store and then switch to the main branch at this time, git worktree can help you do better and make your workflow smoother and more efficient.
+
+Thanks for reading. If you like such stories and want to support me, please consider becoming a Medium member. It costs $5 per month and gives unlimited access to Medium content. I’ll get a little commission if you sign up via my link.
+
+Your support is very important to me — thank you.
