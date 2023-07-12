@@ -11,9 +11,10 @@ alias list-pipenv='for venv in ~/.local/share/virtualenvs/* ; do basename $venv;
 alias lsall='ls -la --color=auto'
 alias mssql="sudo systemctl reset-failed && sudo systemctl start docker && docker container start mssql"
 alias mssqlstop="docker container stop mssql"
+alias nvchad="NVIM_APPNAME=snvim/nvchad nvim"
+alias nvim-lspless="NVIM_APPNAME=snvim/lspless nvim"
 alias permissions="stat -c '%a %U:%G %n'"
 alias py="pipenv run python"
-alias nvim-lspless="NVIM_APPNAME=snvim/lspless nvim"
 
 clipcopy () {
 	cat "${1:-/dev/stdin}" | clip.exe
