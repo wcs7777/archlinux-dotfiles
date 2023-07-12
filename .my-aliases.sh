@@ -13,6 +13,7 @@ alias mssql="sudo systemctl reset-failed && sudo systemctl start docker && docke
 alias mssqlstop="docker container stop mssql"
 alias permissions="stat -c '%a %U:%G %n'"
 alias py="pipenv run python"
+alias nvim-lspless="NVIM_APPNAME=snvim/lspless nvim"
 
 clipcopy () {
 	cat "${1:-/dev/stdin}" | clip.exe
