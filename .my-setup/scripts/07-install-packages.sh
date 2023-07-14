@@ -23,6 +23,7 @@ packages=(
 	"neovim"
 	"openssh"
 	"pacman-contrib"
+	"python-pipenv"
 	"ripgrep"
 	"screenfetch"
 	"sudo"
