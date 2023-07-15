@@ -15,6 +15,7 @@ alias nvchad="NVIM_APPNAME=snvim/nvchad nvim"
 alias nvim-lspless="NVIM_APPNAME=snvim/lspless nvim"
 alias permissions="stat -c '%a %U:%G %n'"
 alias py="pipenv run python"
+alias xopen="xdg-open"
 
 clipcopy () {
 	cat "${1:-/dev/stdin}" | clip.exe
