@@ -3,6 +3,7 @@
 __wcs_docker_image_to_tar() {
 	local distro
 	local outdir
+	local filename
 	local outfile
 	local image_id
 	local container_id
@@ -10,7 +11,8 @@ __wcs_docker_image_to_tar() {
 	local container_created
 	distro="${1:-archlinux}"
 	outdir="${2:-/mnt/d/wsl/dockerdistros}"
-	outfile="${outdir}/${distro}.tar"
+	filename="${3:-$distro}.tar"
+	outfile="$outdir/$filename"
 	image_created=false
 	container_created=false
 	sudo systemctl reset-failed
@@ -39,4 +41,3 @@ __wcs_docker_image_to_tar() {
 
 __wcs_docker_image_to_tar "$@"
 unset -f __wcs_docker_image_to_tar
-
