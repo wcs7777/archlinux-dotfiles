@@ -11,6 +11,7 @@ alias list-pipenv='for venv in ~/.local/share/virtualenvs/* ; do basename $venv;
 alias lsall='ls -la --color=auto'
 alias mssql="sudo systemctl reset-failed && sudo systemctl start docker && docker container start mssql"
 alias mssqlstop="docker container stop mssql"
+alias myconf="/usr/bin/git --git-dir=$HOME/.dotfilesgit --work-tree=$HOME"
 alias nvchad="NVIM_APPNAME=snvim/nvchad nvim"
 alias nvim-lspless="NVIM_APPNAME=snvim/lspless nvim"
 alias permissions="stat -c '%a %U:%G %n'"
