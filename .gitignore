@@ -3,12 +3,6 @@
 !/.bashrc
 !/.gitconfig
 !/.gitignore
-!/.my-aliases.sh
-!/.my-bindkeys.sh
-!/.my-profile-scripts
-!/.my-scripts
-!/.my-shell-plugins
-!/.my-setup
 !/.myclirc
 !/.p10k.zsh
 !/.tmux.conf
@@ -17,10 +11,9 @@
 !/.zprofile
 !/.zshrc
 
-!/.my-zsh-plugins
-/.my-zsh-plugins/locations-array.zsh
-/.my-zsh-plugins/array-locations.zsh
-/.my-zsh-plugins/secret-variables.zsh
+!/.my
+/.my/zsh-plugins/array-locations.zsh
+/.my/zsh-plugins/secret-variables.zsh
 
 !/.config
 /.config/*
