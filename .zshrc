@@ -24,10 +24,10 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-for s in ~/.my-shell-plugins/*.sh; do source "$s"; done && unset s
-for s in ~/.my-zsh-plugins/*.zsh;  do source "$s"; done && unset s
-source ~/.my-aliases.sh
-source ~/.my-bindkeys.sh
+for s in ~/.my/shell-plugins/*.sh; do source "$s"; done && unset s
+for s in ~/.my/zsh-plugins/*.zsh;  do source "$s"; done && unset s
+source ~/.my/aliases.sh
+source ~/.my/bindkeys.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
