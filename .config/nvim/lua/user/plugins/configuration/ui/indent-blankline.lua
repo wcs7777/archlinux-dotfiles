@@ -1,4 +1,4 @@
 local map = require('user.utils.map').map
 
-vim.cmd [[IndentBlanklineDisable!]]
-map('n', '<Leader>uri', ':IndentBlanklineToggle!<CR>', 'Toggle render indentation guide')
+vim.cmd [[IBLDisable]]
+map('n', '<Leader>uri', ':IBLToggle<CR>', 'Toggle render indentation guide')
