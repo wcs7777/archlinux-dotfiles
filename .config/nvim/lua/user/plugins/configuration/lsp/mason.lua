@@ -1,4 +1,5 @@
 local servers = {
+	'clangd',
 	'eslint',
 	'jsonls',
 	'lua_ls',
