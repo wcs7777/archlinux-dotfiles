@@ -2,7 +2,7 @@ vim.g.maplocalleader = ' '
 vim.g.mapleader = ' '
 
 local set = vim.opt
-local tabsize = 2
+local tabsize = 4
 
 set.backup = false
 set.colorcolumn = { '' }
