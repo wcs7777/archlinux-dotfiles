@@ -19,7 +19,6 @@ packages=(
 	"libxslt"
 	"libyaml"
 	"man-db"
-	"mssql-tools"
 	"neovim"
 	"openssh"
 	"pacman-contrib"
