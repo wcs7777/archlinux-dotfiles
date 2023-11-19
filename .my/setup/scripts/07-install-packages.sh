@@ -14,7 +14,6 @@ packages=(
 	"fzf"
 	"git"
 	"git-lfs"
-	"jdk-openjdk"
 	"jdk11-openjdk"
 	"lftp"
 	"libxslt"
