@@ -1,13 +1,23 @@
 #!/bin/bash
 
 __wcs_create_mssql_container() {
-	local image="mcr.microsoft.com/mssql/server:2022-latest"
+	local image="mcr.microsoft.com/mssql/server"
 	local name="${1:-mssql}"
+	local tag="${2:-2022-latest}"
 	local password=""
 	sudo systemctl reset-failed
 	sudo systemctl start docker
-	docker pull "$image"
-	read -p "Password: " -s password
+	image_id=$(docker image ls --all | grep "\b${image}\s*${tag}\b" -m 1 | awk '{print $3}')
+	if [ -z "$image_id" ]; then
+		docker pull "${image}:${tag}"
+		image_id=$(docker image ls --all | grep "\b${image}\s*${tag}\b" -m 1 | awk '{print $3}')
+		image_created=true
+	fi
+	stty -echo
+	printf "Password: "
+	read password
+	stty echo
+	printf "\n"
 	docker container create \
 		-e "ACCEPT_EULA=Y" \
 		-e "MSSQL_SA_PASSWORD=$password" \
@@ -15,7 +25,7 @@ __wcs_create_mssql_container() {
 		-p 1433:1433 \
 		--name "$name" \
 		--hostname "$name" \
-		"$image"
+		"$image_id"
 }
 
 __wcs_create_mssql_container "$@"
