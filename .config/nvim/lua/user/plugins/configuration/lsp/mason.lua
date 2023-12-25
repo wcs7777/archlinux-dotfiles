@@ -4,7 +4,8 @@ local servers = {
 	'jsonls',
 	'lua_ls',
 	'pyright',
-	'sqlls',
+	'rust_analyzer',
+	'tsserver',
 }
 
 require('mason').setup({ max_concurrent_installers = 1 })

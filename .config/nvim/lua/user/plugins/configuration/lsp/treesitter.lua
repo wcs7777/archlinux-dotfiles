@@ -8,6 +8,7 @@ require('nvim-treesitter.configs').setup {
 		'lua',
 		'query',
 		'regex',
+		'rust',
 		'sql',
 		'typescript',
 		'vim',
