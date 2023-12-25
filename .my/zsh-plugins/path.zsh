@@ -24,4 +24,6 @@ PATH="$PATH:/usr/bin/core_perl"
 PATH="$PATH:$HOME/.asdf/shims"
 PATH="$PATH:/opt/asdf-vm/bin"
 PATH="$PATH:$HOME/.local/bin"
+PATH="$PATH:$HOME/.cargo/bin"
+PATH="$PATH:$HOME/.my/bin"
 export PATH

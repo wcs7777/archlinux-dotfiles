@@ -17,3 +17,4 @@ source ~/.my/aliases.sh
 source ~/.my/bindkeys.sh
 
 echo "$WSL_DISTRO_NAME"
+. "$HOME/.cargo/env"
