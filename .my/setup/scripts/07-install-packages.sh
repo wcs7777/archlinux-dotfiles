@@ -8,6 +8,7 @@ packages=(
 	"chatblade"
 	"curl"
 	"docker"
+	"docker-buildx"
 	"docker-compose"
 	"exa"
 	"fd"
