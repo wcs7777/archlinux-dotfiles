@@ -2,6 +2,7 @@ alias cdmfe="cd /mnt/wsl/shared/my-firefox-extensions"
 alias cdproj="cd /mnt/wsl/shared/projects"
 alias cppwd="pwd | clipcopy"
 alias del="trash-put"
+alias docker-rmi-dangling="docker image rm \`docker images -qa -f 'dangling=true'\`"
 alias grep='grep --color=auto'
 alias h1='history 1'
 alias hs='history 1 | rg'
