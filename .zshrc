@@ -9,16 +9,6 @@ HISTFILE=~/.histfile
 HISTSIZE=500000
 SAVEHIST=500000
 
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7A7A7A"
-export COLORTERM="truecolor"
-export EDITOR="nvim"
-# export JAVA_HOME="/usr/lib/jvm/java-21-openjdk"
-export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
-export CHATBLADE_THEME="autumn"
-
-# disable cursor blinking
-# echo "\e[2 q"
-
 source /opt/asdf-vm/asdf.sh
 source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
