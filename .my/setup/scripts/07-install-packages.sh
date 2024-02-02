@@ -24,6 +24,7 @@ packages=(
 	"openssh"
 	"pacman-contrib"
 	"pyright",
+	"reflector"
 	"ripgrep"
 	"screenfetch"
 	"sudo"
