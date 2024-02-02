@@ -1,22 +1,16 @@
-alias cdmfe="cd /mnt/wsl/shared/my-firefox-extensions"
-alias cdproj="cd /mnt/wsl/shared/projects"
-alias cppwd="pwd | clipcopy"
+alias cpwd="pwd | clipcopy"
 alias del="trash-put"
 alias docker-rmi-dangling="docker image rm \`docker images -qa -f 'dangling=true'\`"
 alias grep='grep --color=auto'
 alias h1='history 1'
 alias hs='history 1 | rg'
 alias hsi='history 1 | rg -i'
-alias jsplayground="touch /tmp/tmp-playground.js && code /tmp/tmp-playground.js && node --watch /tmp/tmp-playground.js"
-alias list-pipenv='for venv in ~/.local/share/virtualenvs/* ; do basename $venv; cat $venv/.project | sed "s/\(.*\)/\t\1\n/" ; done'
 alias lsall='ls -la --color=auto'
-alias mssql="sudo systemctl reset-failed && sudo systemctl start docker && docker container start mssql"
-alias mssqlstop="docker container stop mssql"
+alias mssqd="docker container stop mssql"
+alias mssqu="sudo systemctl reset-failed && sudo systemctl start docker && docker container start mssql"
 alias nvchad="NVIM_APPNAME=snvim/nvchad nvim"
 alias nvim-lspless="NVIM_APPNAME=snvim/lspless nvim"
 alias permissions="stat -c '%a %U:%G %n'"
-alias pnvim="pipenv run nvim"
-alias py="pipenv run python"
 alias xopen="xdg-open"
 
 clipcopy () {
@@ -64,10 +58,6 @@ ohmydown() {
 	wget "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/$1/$1.plugin.zsh" -O ~/.my-zsh-plugins/$1.zsh
 }
 
-pathfolders() {
-	echo "${PATH//:/$'\n'}"
-}
-
 stopwatch() {
     start=$(date +%s)
     while true; do
@@ -82,10 +72,6 @@ swapfiles() {
 	mv "$1" "$tmp"
 	mv "$2" "$1"
 	mv "$tmp" "$2"
-}
-
-tcode() {
-	mkfile "$1" && code -- "$1"
 }
 
 vimless() {
