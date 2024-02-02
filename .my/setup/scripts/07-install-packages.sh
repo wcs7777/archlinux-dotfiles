@@ -15,7 +15,6 @@ packages=(
 	"fzf"
 	"git"
 	"git-lfs"
-	"jdk11-openjdk"
 	"lftp"
 	"libxml2"
 	"libxslt"
@@ -25,7 +24,6 @@ packages=(
 	"openssh"
 	"pacman-contrib"
 	"pyright",
-	"python-pipenv"
 	"ripgrep"
 	"screenfetch"
 	"sudo"
