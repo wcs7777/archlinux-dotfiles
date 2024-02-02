@@ -1,7 +1,6 @@
 if [ -n "$ZSH_NAME" ]; then
-	# bindkey "^L"      __wcs_clear_prompt
 	bindkey "^O"      clear-screen
-	bindkey "^[l"      clear-screen
+	bindkey "^[l"     clear-screen
 	bindkey "^H"      backward-kill-word
 	bindkey "^[[3;5~" kill-word
 	bindkey "^[[H"    beginning-of-line
@@ -23,7 +22,6 @@ if [ -n "$ZSH_NAME" ]; then
 	bindkey "^[7"     __wcs_location_7
 	bindkey "^[8"     __wcs_location_8
 	bindkey "^[9"     __wcs_location_9
-	bindkey "^Y"      __wcs_fhistory_edit
 elif [ -n "$BASH" ]; then
 	bind "\C-H":shell-backward-kill-word
 	bind "^[[3;5~":shell-kill-word
