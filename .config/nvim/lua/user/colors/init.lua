@@ -1,8 +1,10 @@
 function ColorMyPencils(scheme, background, transparent_bg, termguicolors)
 	-- background = background or 'dark'
+	-- scheme = scheme or 'catppuccin'
 	-- scheme = scheme or 'rose-pine'
 	background = background or 'light'
-	scheme = scheme or 'PaperColor'
+	scheme = scheme or 'newpaper'
+	-- scheme = scheme or 'PaperColor'
 	transparent_bg = transparent_bg or false
 	termguicolors = termguicolors or true
 	vim.opt.background = background
