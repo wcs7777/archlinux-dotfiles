@@ -11,4 +11,3 @@ __wcs_fhistory_edit() {
 }
 
 zle -N __wcs_fhistory_edit
-
