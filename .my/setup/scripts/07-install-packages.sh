@@ -15,6 +15,7 @@ packages=(
 	"fzf"
 	"git"
 	"git-lfs"
+	"jdk17-openjdk"
 	"lftp"
 	"libxml2"
 	"libxslt"
