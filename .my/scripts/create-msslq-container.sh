@@ -18,7 +18,7 @@ __wcs_create_mssql_container() {
 	read password
 	stty echo
 	printf "\n"
-	docker container create \
+	docker container create "${@:3}" \
 		-e "ACCEPT_EULA=Y" \
 		-e "MSSQL_SA_PASSWORD=$password" \
 		-e "MSSQL_COLLATION=Latin1_General_CI_AS" \
