@@ -5,11 +5,8 @@ alias grep='grep --color=auto'
 alias h1='history 1'
 alias hs='history 1 | rg'
 alias hsi='history 1 | rg -i'
+# alias lazyvim="NVIM_APPNAME=snvim/lazyvim nvim"
 alias lsall='ls -la --color=auto'
-alias mssqd="docker container stop mssql"
-alias mssqu="sudo systemctl reset-failed && sudo systemctl start docker && docker container start mssql"
-alias nvchad="NVIM_APPNAME=snvim/nvchad nvim"
-alias nvim-lspless="NVIM_APPNAME=snvim/lspless nvim"
 alias permissions="stat -c '%a %U:%G %n'"
 alias xopen="xdg-open"
 
