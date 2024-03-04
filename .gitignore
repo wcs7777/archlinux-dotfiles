@@ -22,3 +22,7 @@
 /.config/nvim/plugin/*
 
 *.log
+
+!/.config/snvim
+/.config/snvim/*
+!/.config/snvim/newconf
