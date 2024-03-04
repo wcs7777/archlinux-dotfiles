@@ -1,3 +1,4 @@
+# alias lazyvim="NVIM_APPNAME=snvim/lazyvim nvim"
 alias cpwd="pwd | clipcopy"
 alias del="trash-put"
 alias docker-rmi-dangling="docker image rm \`docker images -qa -f 'dangling=true'\`"
@@ -5,7 +6,7 @@ alias grep='grep --color=auto'
 alias h1='history 1'
 alias hs='history 1 | rg'
 alias hsi='history 1 | rg -i'
-# alias lazyvim="NVIM_APPNAME=snvim/lazyvim nvim"
+alias list-git-ignores-files="git check-ignore -v -- *"
 alias lsall='ls -la --color=auto'
 alias permissions="stat -c '%a %U:%G %n'"
 alias xopen="xdg-open"
