@@ -38,6 +38,8 @@ packages=(
 	"vim"
 	"wget"
 	"which"
+	"wl-clipboard"
+	"xorg-xeyes"
 	"zip"
 	"zsh"
 )
