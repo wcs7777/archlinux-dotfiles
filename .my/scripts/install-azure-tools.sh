@@ -2,7 +2,7 @@
 
 . /opt/asdf-vm/asdf.sh
 
-readonly azure_cli_version="2.56.0"
+readonly azure_cli_version="2.58.0"
 readonly azure_func_version="4.0.5455"
 
 asdf plugin add azure-cli https://github.com/EcoMind/asdf-azure-cli
