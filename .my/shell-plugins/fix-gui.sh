@@ -7,5 +7,5 @@ if ! test -f $file_guard; then
 	sudo rm -rf /tmp/.X11-unix
 	sudo ln -s /mnt/wslg/.X11-unix /tmp/.X11-unix
 	sudo ln -s /mnt/wslg/runtime-dir/wayland-0* /run/user/1000/
-	touch $file_guard
+	sudo touch $file_guard
 fi
