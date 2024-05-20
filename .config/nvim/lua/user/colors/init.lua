@@ -1,6 +1,6 @@
 function ColorMyPencils(scheme, background, transparent_bg, termguicolors)
 	-- background = background or 'dark'
-	-- scheme = scheme or 'catppuccin'
+	-- scheme = scheme or 'kanagawa-dragon'
 	-- scheme = scheme or 'rose-pine'
 	background = background or 'light'
 	scheme = scheme or 'newpaper'
