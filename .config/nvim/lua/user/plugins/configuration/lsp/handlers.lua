@@ -58,8 +58,4 @@ function M.setup()
 	)
 end
 
-function M.on_attach(client, buffer)
-	M.lsp_keymaps(buffer)
-end
-
 return M
