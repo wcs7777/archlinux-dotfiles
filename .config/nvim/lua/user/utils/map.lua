@@ -37,8 +37,10 @@ function M.function_wrapper(fn, ...)
 end
 
 function M.selection_bounds()
-	local first = vim.fn.getcurpos()[2]
-	local last = vim.fn.line('v')
+	vim.cmd([[ execute "normal! \<ESC>" ]])
+	vim.fn.visualmode()
+	local first = vim.fn.getpos("'<")[2]
+	local last = vim.fn.getpos("'>")[2]
 	if (first > last) then
 		first, last = last, first
 	end
