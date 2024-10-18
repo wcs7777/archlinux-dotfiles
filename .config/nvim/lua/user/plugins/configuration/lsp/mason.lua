@@ -1,11 +1,12 @@
 local servers = {
 	'clangd',
+	'cssls',
 	'eslint',
 	'jsonls',
 	'lua_ls',
 	'pyright',
 	'rust_analyzer',
-	'tsserver',
+	'ts_ls',
 }
 
 require('mason').setup({ max_concurrent_installers = 1 })
