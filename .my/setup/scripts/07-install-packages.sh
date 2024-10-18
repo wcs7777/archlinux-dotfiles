@@ -5,7 +5,6 @@ packages=(
 	"asdf-vm"
 	"base-devel"
 	"bat"
-	"chatblade"
 	"curl"
 	"docker"
 	"docker-buildx"
@@ -24,7 +23,6 @@ packages=(
 	"neovim"
 	"openssh"
 	"pacman-contrib"
-	"pyright",
 	"reflector"
 	"ripgrep"
 	"screenfetch"
