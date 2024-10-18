@@ -7,10 +7,12 @@ vim.api.nvim_create_autocmd('BufLeave', {
 	group = auto_save,
 	desc = 'Automatically save on leaving file',
 	callback = function(args)
-		if args.file ~= '' and vim.fn.getbufinfo(args.buf)[1].changed == 1 then
-			strip_whitespaces_to_the_right()
-			remove_extra_new_lines_on_the_end()
-			vim.cmd('update')
-		end
+		pcall(function ()
+			if args.file ~= '' and vim.fn.getbufinfo(args.buf)[1].changed == 1 then
+				strip_whitespaces_to_the_right()
+				remove_extra_new_lines_on_the_end()
+				vim.cmd('update')
+			end
+		end)
 	end
 })
