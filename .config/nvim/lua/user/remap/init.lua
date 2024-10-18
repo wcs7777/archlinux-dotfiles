@@ -36,6 +36,8 @@ map('n', '<Leader>ttv', ':vnew term://zsh<CR>', 'Open zsh to the side')
 map('n', '<Leader>w', vim.cmd.update, 'Save buffer')
 map('n', '<Leader>x', '<cmd>!chmod 744 %<CR>', 'Make buffer executable')
 map('n', '<Leader>ffp', ':echo expand("%:p")<CR>', 'Show current file full path')
+map('n', '<Leader>tif', fn(vim.cmd, 'diffthis'), 'Diff this file')
+map('n', '<Leader>tof', fn(vim.cmd, 'diffoff'), 'Diff off this file')
 
 -- _Navigation
 map('n', '<Leader>bl', vim.cmd.ls, 'List buffers')
